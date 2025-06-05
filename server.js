@@ -12,9 +12,12 @@ require('./config/db');
 
 // Import routes
 const userRoutes = require('./routes/userRoutes');
+const transportRoutes = require('./routes/transportRoutes');
 
 
+//mount api
 app.use('/api', userRoutes);
+app.use('/api', transportRoutes);
 
 
 app.listen(PORT, () => {
